@@ -1,0 +1,89 @@
+MockBlogMenu:
+    MenuOne:
+        ID: 1
+        Title: BlogMenu One
+        
+    MenuTwo:
+        ID: 2
+        Title: BlogMenu Two
+        
+    MenuThree:
+        ID: 3
+        Title: BlogMenu Three
+        
+    MenuTwoOne:
+        ID: 4
+        Title: BlogMenu Two One
+        ParentID: 2
+    
+    MenuTwoTwo:
+        ID: 5
+        Title: BlogMenu Two Two
+        ParentID: 2
+    
+    MenuTwoThree:
+        ID: 6
+        Title: BlogMenu Two Three
+        ParentID: 2
+        
+    MenuTwoTwoOne:
+        ID: 7
+        Title: BlogMenu Two Two One
+        ParentID: 5
+    
+    MenuTwoTwoTwo:
+        ID: 8
+        Title: BlogMenu Two Two Two
+        ParentID: 5
+    
+    MenuThreeOne: 
+        ID: 9
+        Title: BlogMenu Three One 
+        ParentID: 3
+        
+    MenuThreeTwo: 
+        ID: 10
+        Title: BlogMenu Three Two
+        ParentID: 3
+        
+Page:
+    MenuThreeThree:
+        ID: 11
+        Title: Page Three Three
+        ParentID: 3 
+    
+BlogHolder:         
+    BlogHolderOne:
+        ID: 100
+        Title: BlogHolder One
+        
+    BlogHolderTwo:
+        ID: 101
+        Title: BlogHolder Two
+
+BlogEntry: 
+    BlogEntryOne:
+        Title: BlogEntry One
+        ParentID: 101
+        BlogMenus: =>MockBlogMenu.MenuTwo
+        
+    BlogEntryTwo:
+        Title: BlogEntry Two
+        ParentID: 101
+        BlogMenus: =>MockBlogMenu.MenuOne
+        
+    BlogEntryThree:
+        Title: BlogEntry Three
+        ParentID: 101
+        BlogMenus: =>MockBlogMenu.MenuTwoTwoTwo
+        
+    BlogEntryFour:
+        Title: BlogEntry Four
+        ParentID: 102
+        BlogMenus: =>MockBlogMenu.MenuTwoOne, =>MockBlogMenu.MenuThree
+        
+    BlogEntryFive:
+        Title: BlogEntry Five
+        ParentID: 102
+        BlogMenus: =>MockBlogMenu.MenuThreeTwo
+        
