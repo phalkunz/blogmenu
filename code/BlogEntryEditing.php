@@ -12,7 +12,7 @@ class BlogEntryEditing extends DataObjectDecorator {
 	}
 	
 	function updateCMSFields(&$fields) {	
-		$categoriesField = new TreeMultiselectField("Menu", "Menu", self::$blog_menu_class);
+		$categoriesField = new TreeMultiselectField("BlogMenus", "Menu", self::$blog_menu_class);
 		$categoriesField->setFilterFunction(array($this, "setCustomMarkingFilter"));
 
 		$fields->addFieldToTab("Root.Content.Menu", $categoriesField);
