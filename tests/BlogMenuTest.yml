@@ -1,4 +1,4 @@
-MockBlogMenu:
+BlogMenuTest_Mock:
     MenuOne:
         ID: 1
         Title: BlogMenu One
@@ -65,25 +65,25 @@ BlogEntry:
     BlogEntryOne:
         Title: BlogEntry One
         ParentID: 101
-        BlogMenus: =>MockBlogMenu.MenuTwo
+        BlogMenus: =>BlogMenuTest_Mock.MenuTwo
         
     BlogEntryTwo:
         Title: BlogEntry Two
         ParentID: 101
-        BlogMenus: =>MockBlogMenu.MenuOne
+        BlogMenus: =>BlogMenuTest_Mock.MenuOne
         
     BlogEntryThree:
         Title: BlogEntry Three
         ParentID: 101
-        BlogMenus: =>MockBlogMenu.MenuTwoTwoTwo
+        BlogMenus: =>BlogMenuTest_Mock.MenuTwoTwoTwo
         
     BlogEntryFour:
         Title: BlogEntry Four
         ParentID: 102
-        BlogMenus: =>MockBlogMenu.MenuTwoOne, =>MockBlogMenu.MenuThree
+        BlogMenus: =>BlogMenuTest_Mock.MenuTwoOne, =>BlogMenuTest_Mock.MenuThree
         
     BlogEntryFive:
         Title: BlogEntry Five
         ParentID: 102
-        BlogMenus: =>MockBlogMenu.MenuThreeTwo
+        BlogMenus: =>BlogMenuTest_Mock.MenuThreeTwo
         
