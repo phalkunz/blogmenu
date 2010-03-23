@@ -20,7 +20,7 @@ class BlogMenu extends BlogTree {
 	);
 	
 	static $defaults = array(
-		'InheritSideBar' => True
+		'ShowInMenus' => true
 	);
 	
 	/**
