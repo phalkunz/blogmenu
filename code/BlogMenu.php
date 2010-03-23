@@ -19,6 +19,10 @@ class BlogMenu extends BlogTree {
 		'BlogMenu'
 	);
 	
+	static $defaults = array(
+		'InheritSideBar' => True
+	);
+	
 	/**
 	 * Get all blog menus from this menu.
 	 * @return DataObjectSet
