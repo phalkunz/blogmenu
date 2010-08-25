@@ -12,21 +12,9 @@ class BlogEntryEditing extends DataObjectDecorator {
 	}
 	
 	function updateCMSFields(&$fields) {	
-		$categoriesField = new TreeMultiselectField("BlogMenus", "Menu", self::$blog_menu_class);
-		$categoriesField->setFilterFunction(array($this, "setCustomMarkingFilter"));
+		$categoriesField = new CheckboxSetField("BlogMenus", "Menu", DataObject::get('BlogMenu'));
 
 		$fields->addFieldToTab("Root.Content.Menu", $categoriesField);
-	}
-	
-	/**
-	 * Show only BlogMenu page type in TreeMultiselectField
-	 */
-	function setCustomMarkingFilter($node) {
-		if($node->ClassName ==  self::$blog_menu_class) {
-			return true;
-		}
-		
-		return false;
 	}
 
 }
